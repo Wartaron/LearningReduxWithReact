@@ -19,13 +19,13 @@ const data =  function(state=initialState, action){
                 ...state,
                 error: null
             }
-            break;
+
         case DATA_FILLED_ERROR:
             return {
                 ...state,
                 error: action.payload
             }
-            break;
+
         default:
             return {
                 ...state

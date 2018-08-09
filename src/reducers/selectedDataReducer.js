@@ -23,7 +23,6 @@ const selectedData =  function(state=initialState, action){
                 ...state,
                 selectedData: action.payload
             }
-            break;
         case SET_FACT_SELECTED:
             return {
                 ...state,
@@ -32,7 +31,7 @@ const selectedData =  function(state=initialState, action){
                     factSelected: action.payload
                 }
             }
-            break;
+            
         case SET_MARKET_SELECTED:
             return{
                 ...state,
@@ -41,7 +40,7 @@ const selectedData =  function(state=initialState, action){
                     marketSelected: action.payload
                 }
             }
-            break;
+
         case SET_CATEGORY_SELECTED:
             return{
                 ...state,
@@ -50,7 +49,7 @@ const selectedData =  function(state=initialState, action){
                     categorySelected: action.payload
                 }
             }
-            break;
+
         case SET_LAST_PERIOD:
             return {
                 ...state,
@@ -59,19 +58,19 @@ const selectedData =  function(state=initialState, action){
                     lastPeriod: action.payload
                 }
             }
-            break;
+
         case SELECTED_DATA_SUCCESS:
             return{
                 ...state,
                 error: null
             }
-            break;
+
         case SELECTED_DATA_ERROR:
             return {
                 ...state,
                 error: action.payload
             }
-            break;
+
         default:
             return {
                 ...state

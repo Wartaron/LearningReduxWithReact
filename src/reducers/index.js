@@ -3,7 +3,9 @@ import { combineReducers } from 'redux';
 import data from './dataReducer';
 import selectedData from './selectedDataReducer';
 
-export default combineReducers({
+const reducers = combineReducers({
     data,
     selectedData
 });
+
+export default reducers;

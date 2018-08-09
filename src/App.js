@@ -3,23 +3,24 @@ import { connect } from 'react-redux';
 
 import { setData } from './actions/dataActions';
 
-connect((store) => {
-    return{
-        data: store.data.data,
-        selectedData: store.selectedData
-    };
-})
 class App extends Component {
-    componentWillMount(){
-        setData();
-    }
   render() {
-      console.log(this.props.data);
+
     return(
         <div>
+            hola
         </div>
     );
   }
 }
+
+function mapStateToProps(state){
+    return {
+        data: state.data,
+        selectedData: state.selectedData
+    }
+}
+
+App = connect(mapStateToProps)(App);
 
 export default App;

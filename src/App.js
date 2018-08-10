@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { setData } from './actions/dataActions';
+import * as DataActions from './actions/dataActions';
 import * as SelectedDataActions from './actions/selectedDataActions';
 
 class App extends Component {
 
     componentDidMount(){
-        this.props.actions.DataActions.setData([1,2,3,4,5,6,'danilo']);
+        this.props.DataActions.setData([1,2,3,4,5,6,'danilo']);
     }
   render() {
       console.log(this.props);
@@ -31,13 +31,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        actions: {
-            SelectedDataActions: bindActionCreators(SelectedDataActions, dispatch),
-            DataActions: bindActionCreators({setData}, dispatch)
-        }
+        SelectedDataActions: bindActionCreators(SelectedDataActions, dispatch),
+        DataActions: bindActionCreators(DataActions, dispatch)
     }
 }
-
 
 App = connect(mapStateToProps, mapDispatchToProps)(App);
 

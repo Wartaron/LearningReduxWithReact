@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 
-import data from './dataReducer';
-import selectedData from './selectedDataReducer';
+import dataReducer from './dataReducer';
+import selectedDataReducer from './selectedDataReducer';
 
 const reducers = combineReducers({
-    data,
-    selectedData
+    data: dataReducer,
+    selectedData: selectedDataReducer
 });
 
 export default reducers;

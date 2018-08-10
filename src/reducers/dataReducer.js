@@ -7,7 +7,7 @@ const initialState = {
     error: null
 }
 
-const data =  function(state=initialState, action){
+const dataReducer =  function(state=initialState, action){
     switch (action.type) {
         case SET_DATA:
             return {
@@ -33,4 +33,4 @@ const data =  function(state=initialState, action){
     }
 }
 
-export default data;
+export default dataReducer;

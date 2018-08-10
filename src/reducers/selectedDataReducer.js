@@ -16,7 +16,7 @@ const initialState = {
     error: null
 }
 
-const selectedData =  function(state=initialState, action){
+const selectedDataReducer =  function(state=initialState, action){
     switch (action.type) {
         case SET_DEFAULT_SELECTED_DATA:
             return{
@@ -31,7 +31,7 @@ const selectedData =  function(state=initialState, action){
                     factSelected: action.payload
                 }
             }
-            
+
         case SET_MARKET_SELECTED:
             return{
                 ...state,
@@ -78,4 +78,4 @@ const selectedData =  function(state=initialState, action){
     }
 }
 
-export default selectedData;
+export default selectedDataReducer;

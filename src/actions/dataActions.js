@@ -1,8 +1,8 @@
-import * as actionTypes from '../actionTypes/actionTypes';
+import SET_DATA from '../actionTypes/actionTypes';
 
-export function setData(data = [1,2,3]){
+export function setData(data = []){
     return {
-        type: actionTypes.SET_DATA,
+        type: SET_DATA,
         payload: data
     };
 }
